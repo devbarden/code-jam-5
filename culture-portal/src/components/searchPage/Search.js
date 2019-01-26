@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import './Search.css'
-import data from '../../../../person_content.json'
+import data from '../../data/person_content.json'
 
 class Search extends Component {
   constructor(props) {
@@ -50,17 +50,45 @@ class Search extends Component {
     }
 
     return (
-      <div className="App">
-        <input placeholder="Поиск по имени" onChange={this.searchByName} />
-        <select onChange={this.setSort}>
-          <option value="az">Сортировать по имени: A-Z</option>
-          <option value="za">Сортировать по имени: Z-A</option>
-        </select>
-        <ul>
+      <div className="search">
+        <div className="search__block__input">
+          <input placeholder="Поиск по имени" onChange={this.searchByName} />
+          <div>
+            <label className="select-label">Сортировать по имени:</label>
+            <select
+              onChange={this.setSort}
+              className="cs-select cs-skin-rotate"
+            >
+              <option value="az">A-Z</option>
+              <option value="za">Z-A</option>
+            </select>
+          </div>
+        </div>
+        <div className="search__block__list">
           {copyArray.map(person => (
-            <li key={person.dateOfBirth}>{person.name}</li>
+            <div className="search__block__one" key={person.dateOfDeath}>
+              <div>
+                <div>
+                  <span>Имя:</span> {person.name}
+                </div>
+                <div>
+                  <span>Место рождения:</span> {person.placeOfBirth}
+                </div>
+                <div>
+                  <span> Дата рождения:</span> {person.dateOfDeath}
+                </div>
+              </div>
+              <div>
+                <img
+                  src={person.photo}
+                  alt={person.name}
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     )
   }
