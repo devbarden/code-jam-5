@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import director from '../../data/person_content'
-import DirectorOfTheDayContainer from '../../layouts/mainPage/DirectorOfTheDayContainer'
+import React, { Component } from 'react';
+import director from '../../data/person_content';
+import DirectorOfTheDayContainer from '../../layouts/mainPage/DirectorOfTheDayContainer';
 
 export default class DirectorOfTheDay extends Component {
     state = {
@@ -20,6 +20,6 @@ export default class DirectorOfTheDay extends Component {
             />
         )
     }
-}
+};
 
 
