@@ -6,6 +6,8 @@ import TimelinePerson from '../components/timeline/timeline'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+import Layout from '../layouts/Layout'
 import Persons from '../data/person_content'
 
 // const IND = 0
@@ -30,7 +32,6 @@ const PersonPage = () => (
     <h3>Работы</h3>
     <ListOfWorks/>
     <Link to="/">Go back to the homepage</Link>
-
   </Layout>
 )
 
