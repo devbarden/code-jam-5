@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 
 import './Search.css'
-import data from './person_content.json'
+import data from '../../../../person_content.json'
 
 class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = { persons: [...data], search: '' }
-    console.log(this.state)
+    this.state = {
+      persons: [...data],
+      search: '',
+      selected: '',
+    }
     this.searchByName = this.searchByName.bind(this)
   }
 

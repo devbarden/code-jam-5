@@ -8,7 +8,6 @@ import Search from '../components/searchPage/Search'
 
 const IndexPage = () => (
   <Layout>
-    <Search />
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -17,6 +16,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/page-3/">Go to page 3</Link>
   </Layout>
 )
 
