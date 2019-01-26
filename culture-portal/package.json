@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bootstrap": "^4.2.1",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.9",
@@ -16,7 +17,9 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.3.0",
+    "reactstrap": "^7.1.0"
   },
   "keywords": [
     "gatsby"
