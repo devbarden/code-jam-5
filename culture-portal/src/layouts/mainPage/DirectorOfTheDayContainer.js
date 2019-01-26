@@ -1,46 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import director from '../../data/person_content.json'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const DirectorOfTheDay = ({director}) => (
+const DirectorOfTheDayContainer = ({photo, name, placeOfBirth, dateOfBirth, dateOfDeath, shortInfo }) => (
     <section className="director-of-the-day">
-        <h1 style={{
-            marginLeft: '160px'
-        }}>Director of the day</h1>
         <div className="director-info">
             <div className="director-photo">
-                <img src={director.photo} alt="Владимир Корш-Саблин"/>
+                <img src={photo} alt={name}/>
             </div>
             <div className="director-biography">
-                <h2>{director[0].name}</h2>
-                <p>Место Рождения:
-                    <span style={{
-                        fontWeight : 'bold',
-                        marginLeft: '3px'
-                    }}>{director[0].placeOfBirth}
-                    </span></p>
-                <p>Дата Рождения:
-                    <span style={{
-                    fontWeight : 'bold',
-                    marginLeft: '3px'
-                }}>{director[0].dateOfBirth}</span> г.
-                </p>
-                <p>Дата Смерти:
-                    <span style={{
-                        fontWeight : 'bold',
-                        marginLeft: '3px'
-                    }}>{director[0].dateOfDeath}</span> г.
-                </p>
-                <p style={{
-                    maxWidth: '500px'
-                }}>{director[0].shortInfo}</p>
-
+                <h1>Director of the day</h1>
+                <h2>{name}</h2>
+                <p>Место Рождения:<span>{placeOfBirth}</span></p>
+                <p>Дата Рождения:<span>{dateOfBirth}</span> г.</p>
+                <p>Дата Смерти:<span>{dateOfDeath}</span> г.</p>
+                <p className='short-info'>{shortInfo}</p>
             </div>
         </div>
     </section>
-)
+);
 
-DirectorOfTheDay.propTypes = {
-    director: PropTypes.arrayOf(PropTypes.object).isRequired
-}
-export default DirectorOfTheDay
+DirectorOfTheDayContainer.propTypes = {
+    photo: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    placeOfBirth: PropTypes.string.isRequired,
+    dateOfBirth: PropTypes.string.isRequired,
+    dateOfDeath: PropTypes.string.isRequired,
+    shortInfo: PropTypes.string.isRequired
+};
+
+export default DirectorOfTheDayContainer;
