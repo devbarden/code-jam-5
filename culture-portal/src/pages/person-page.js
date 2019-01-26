@@ -4,10 +4,9 @@ import { Link } from 'gatsby'
 import ListOfWorks from '../components/listOfWorks/listOfWorks'
 import TimelinePerson from '../components/timeline/timeline'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-
 import Layout from '../layouts/Layout'
+// import SEO from '../components/seo'
+
 import Persons from '../data/person_content'
 
 // const IND = 0
@@ -21,7 +20,6 @@ const personPhoto = Persons[0].photo
 
 const PersonPage = () => (
   <Layout>
-    <SEO title={personName}/>
     <h1 style={{ textAlign: 'center' }}>{personName}</h1>
     <p>{personName} родился {dateOfBirth}
     в городе {placeOfDeath}. {shortInfo}</p>
