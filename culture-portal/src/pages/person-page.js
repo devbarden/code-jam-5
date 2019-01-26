@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../layouts/Layout'
 import Persons from '../data/person_content'
 
 // const IND = 0
@@ -14,7 +13,6 @@ const shortInfo = Persons[0].shortInfo
 
 const PersonPage = () => (
   <Layout>
-    <SEO title={name} />
     <h1>{name}</h1>
     <p>{name} родился {dateOfBirth} в {placeOfDeath}. {shortInfo}</p>
     <Link to="/">Go back to the homepage</Link>
