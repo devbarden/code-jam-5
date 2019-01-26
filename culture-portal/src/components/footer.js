@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaVk, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
 
 const Footer = () => (
   <footer className='footer'
@@ -67,13 +68,13 @@ const Footer = () => (
         >© 2013–2019, Все права защищены</span>
         <ul className='social__list'>
           <li className='social__item'>
-            <a href='https://social.com' className='social__link'><i className="fab fa-vk"></i></a>
+            <a href='https://social.com' className='social__link'><FaVk /></a>
           </li>
           <li className='social__item'>
-            <a href='https://social.com' className='social__link'><i className="fab fa-facebook-square"></i></a>
+            <a href='https://social.com' className='social__link'><FaFacebookSquare /></a>
           </li>
           <li className='social__item'>
-            <a href='https://social.com' className='social__link'><i className="fab fa-twitter"></i></a>
+            <a href='https://social.com' className='social__link'><FaTwitterSquare /></a>
           </li>
         </ul>
       </div>

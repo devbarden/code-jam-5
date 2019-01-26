@@ -25,7 +25,7 @@ const Header = () => (
             </li>
             <li className='nav__item'>
               <Link className='nav__link'
-                to="/page-2"
+                to="/directors-list"
                 style={{
                   textDecoration: `none`,
                 }}
