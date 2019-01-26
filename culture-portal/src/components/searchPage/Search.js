@@ -9,19 +9,37 @@ class Search extends Component {
     this.state = {
       persons: [...data],
       search: '',
-      selected: '',
+      order: '',
     }
     this.searchByName = this.searchByName.bind(this)
+    this.setSort = this.setSort.bind(this)
   }
 
   searchByName(e) {
-    var value = e.target.value
+    let value = e.target.value
 
     this.setState({ search: value })
   }
 
+  setSort(e) {
+    let value = e.target.value
+
+    this.setState({ order: value })
+  }
+
   render() {
     let copyArray = [...this.state.persons]
+
+    if (this.state.order) {
+      let check = this.state.order === 'az' ? 1 : -1
+      copyArray.sort((a, b) => {
+        if (a.name > b.name) {
+          return check
+        } else {
+          return -check
+        }
+      })
+    }
 
     if (this.state.search) {
       copyArray = copyArray.filter(person => {
@@ -33,7 +51,11 @@ class Search extends Component {
 
     return (
       <div className="App">
-        <input placeholder="Поиск" onChange={this.searchByName} />
+        <input placeholder="Поиск по имени" onChange={this.searchByName} />
+        <select onChange={this.setSort}>
+          <option value="az">Сортировать по имени: A-Z</option>
+          <option value="za">Сортировать по имени: Z-A</option>
+        </select>
         <ul>
           {copyArray.map(person => (
             <li key={person.dateOfBirth}>{person.name}</li>
