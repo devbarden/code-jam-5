@@ -6,7 +6,7 @@ const Header = () => (
   <header
     style={{
       background: `#38393d`,
-      fontFamily: `Segoe UI, sans-serif`
+      fontFamily: `Segoe UI, sans-serif`,
     }}
   >
     <div className='container'>
@@ -30,29 +30,39 @@ const Header = () => (
                   textDecoration: `none`,
                 }}
               >
-                Список режисерова
+                Список режисеров
               </Link>
             </li>
-              <li className='nav__item'>
-                  <Link className='nav__link'
-                        to="/team"
-                        style={{
-                            textDecoration: `none`,
-                        }}
-                  >
-                      Наша команда
-                  </Link>
-              </li>
+            <li className='nav__item'>
+              <Link
+                className='nav__link'
+                to="/team"
+                style={{
+                  textDecoration: `none`,
+                }}
+              >
+                 Наша команда
+              </Link>
+            </li>
           </ul>
           <ul className='language__list'>
             <li className='language__item'>
-              <img src='https://image.flaticon.com/icons/svg/197/197408.svg' className='language__image'></img>
+              <img
+                src='https://image.flaticon.com/icons/svg/197/197408.svg'
+                className='language__image'>
+              </img>
             </li>
             <li className='language__item'>
-              <img src='https://image.flaticon.com/icons/svg/197/197374.svg' className='language__image'></img>
+              <img
+                src='https://image.flaticon.com/icons/svg/197/197374.svg'
+                className='language__image'>
+              </img>
             </li>
             <li className='language__item'>
-              <img src='https://image.flaticon.com/icons/svg/197/197527.svg' className='language__image'></img>
+              <img
+                src='https://image.flaticon.com/icons/svg/197/197527.svg'
+                className='language__image'>
+              </img>
             </li>
           </ul>
         </nav>

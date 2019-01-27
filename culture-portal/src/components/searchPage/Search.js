@@ -38,7 +38,7 @@ class Search extends Component {
   }
 
   linkToPersonPage (id) {
-    localStorage.setItem('id', id)
+    window.localStorage.setItem('id', id)
     window.location.assign('/person-page')
   }
 

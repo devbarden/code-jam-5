@@ -8,8 +8,8 @@ import Footer from './Footer'
 import './layout.css'
 
 const Layout = ({ children }) => (
-    <StaticQuery
-        query={graphql`
+  <StaticQuery
+    query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
@@ -18,25 +18,26 @@ const Layout = ({ children }) => (
         }
       }
     `}
-        render={data => (
-            <>
-                <Header siteTitle={data.site.siteMetadata.title} />
-                <div
-                    style={{
-                        margin: `0 auto`,
-                        paddingTop: 0,
-                    }}
-                >
-                    {children}
-                    <Footer />
-                </div>
-            </>
-        )}
-    />
-);
+    render={data => (
+      <>
+        <div className="site">
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div className="site-content">
+            <main>
+              <div className='container'>
+                {children}
+              </div>
+            </main>
+          </div>
+          <Footer />
+        </div>
+      </>
+    )}
+  />
+)
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
-};
+  children: PropTypes.node.isRequired,
+}
 
 export default Layout

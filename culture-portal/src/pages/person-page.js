@@ -15,11 +15,11 @@ import Video from '../components/Video/video'
 // import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
 // const IND = 0
-if (!localStorage.getItem('id')){
-    localStorage.setItem('id','0')
+if (!window.localStorage.getItem('id')) {
+  window.localStorage.setItem('id', '0')
 }
 
-const index = parseInt(localStorage.getItem('id'))
+const index = parseInt(window.localStorage.getItem('id'))
 const personName = Persons[index].name
 const dateOfBirth = Persons[index].dateOfBirth
 const dateOfDeath = Persons[index].dateOfDeath
@@ -42,7 +42,7 @@ const PersonPage = () => (
     <Video videoSrc={personVideo}/>
     <h3>Работы</h3>
     <ListOfWorks/>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/">Вернуться на главную страницу</Link>
   </Layout>
 )
 
