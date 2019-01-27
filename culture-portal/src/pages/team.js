@@ -3,7 +3,7 @@ import * as FontAwesome from 'react-icons/fa'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './teamPageStyle.css'
 
-import Layout from '../components/layout'
+import Layout from '../layouts/Layout'
 
 const TeamPage = () => (
   <Layout>
