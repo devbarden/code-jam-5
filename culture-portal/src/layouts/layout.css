@@ -739,23 +739,23 @@ button:hover {
 
 
 /* Gallery style */
-.slick-track{
+.slick-slider .slick-track{
   display: flex;
   align-items: center;
 }
-.slick-slide img{
+.slick-slider img{
   margin: 0 auto;
   max-width: 180px;
 }
-.slick-next{
+.slick-slider .slick-next{
   right: 0;
   z-index: 10;
 }
-.slick-next:before,
-.slick-prev:before{
+.slick-slider .slick-next:before,
+.slick-slider .slick-prev:before{
   color: rgb(55, 56, 59);
 }
-.slick-prev{
+.slick-slider .slick-prev{
   left: 0;
   z-index: 10;
 }

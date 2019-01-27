@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout'
 
 import Persons from '../data/person_content'
 import Video from '../components/Video/video'
-// import Gallery from '../components/Gallery/gallery'
+import Gallery from '../components/Gallery/gallery'
 //
 // import '../../node_modules/slick-carousel/slick/slick.css'
 // import '../../node_modules/slick-carousel/slick/slick-theme.css'
@@ -39,6 +39,7 @@ const PersonPage = () => (
       <img src={personPhoto} alt={personName} height="300"/>
     </p>
     <TimelinePerson/>
+    <Gallery gallery={personGallery}/>
     <Video videoSrc={personVideo}/>
     <h3>Работы</h3>
     <ListOfWorks/>

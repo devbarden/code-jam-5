@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
 
-import '../../node_modules/slick-carousel/slick/slick.css'
-import '../../node_modules/slick-carousel/slick/slick-theme.css'
+import './slick.css'
+import './slick-theme.css'
 
 class Gallery extends Component {
   constructor (props) {
