@@ -12,9 +12,11 @@ class Search extends Component {
       order: '',
       orderInput: 'name'
     }
+
     this.searchByName = this.searchByName.bind(this)
     this.setSort = this.setSort.bind(this)
     this.setInputSort = this.setInputSort.bind(this)
+    this.linkToPersonPage = this.linkToPersonPage.bind(this)
   }
 
   searchByName (e) {
@@ -33,6 +35,11 @@ class Search extends Component {
     let value = e.target.value
 
     this.setState({ orderInput: value })
+  }
+
+  linkToPersonPage (id) {
+    localStorage.setItem('id', id)
+    window.location.assign('/person-page')
   }
 
   render () {
@@ -82,7 +89,11 @@ class Search extends Component {
         </div>
         <div className="search__block__list">
           {copyArray.map(person => (
-            <div className="search__block__one" key={person.dateOfDeath}>
+            <div
+              className="search__block__one"
+              key={person.id}
+              onClick={() => this.linkToPersonPage(person.id)}
+            >
               <div>
                 <div>
                   <span>Имя:</span> {person.name}
