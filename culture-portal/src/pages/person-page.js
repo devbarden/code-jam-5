@@ -10,13 +10,18 @@ import Layout from '../layouts/Layout'
 import Persons from '../data/person_content'
 
 // const IND = 0
-const personName = Persons[0].name
-const dateOfBirth = Persons[0].dateOfBirth
-// const dateOfDeath = Persons[0].dateOfDeath
-const placeOfDeath = Persons[0].placeOfBirth
-const shortInfo = Persons[0].shortInfo
-const works = Persons[0].Works
-const personPhoto = Persons[0].photo
+if (!localStorage.getItem('id')){
+    localStorage.setItem('id','0')
+}
+
+const index = parseInt(localStorage.getItem('id'))
+const personName = Persons[index].name
+const dateOfBirth = Persons[index].dateOfBirth
+const dateOfDeath = Persons[index].dateOfDeath
+const placeOfDeath = Persons[index].placeOfBirth
+const shortInfo = Persons[index].shortInfo
+const works = Persons[index].works
+const personPhoto = Persons[index].photo
 
 const PersonPage = () => (
   <Layout>

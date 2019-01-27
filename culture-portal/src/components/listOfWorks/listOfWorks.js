@@ -6,13 +6,15 @@ class PersonTimeline extends Component {
     super(props)
     this.state = {
       persons: [...Persons],
+      id: localStorage.getItem('id'),
+      index: parseInt(localStorage.getItem('id'), 10)
     }
   }
 
   render () {
     return (
       <ul>
-        {this.state.persons[0].Works.map(txt => <li>{txt}</li>)}
+        {this.state.persons[this.state.index].works.map(txt => <li>{txt}</li>)}
       </ul>
     )
   }
