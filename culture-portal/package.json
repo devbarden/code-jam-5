@@ -19,10 +19,11 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
-    "reactstrap": "^7.1.0",
-    "vertical-timeline-component-for-react": "latest",
+    "react-modal-video": "^1.2.1",
     "react-slick": "^0.23.2",
-    "slick-carousel": "^1.8.1"
+    "reactstrap": "^7.1.0",
+    "slick-carousel": "^1.8.1",
+    "vertical-timeline-component-for-react": "latest"
   },
   "keywords": [
     "gatsby"
