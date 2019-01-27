@@ -44,3 +44,17 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyAlredggxm1SRQcekdfVsk6oqFr4Wj-JnM')
 })(MapContainer)
+
+// How to use
+// <MapContainer markers={markers}/>
+// const markers = [
+//   {
+//     lat: 54.541017,
+//     lng: 29.668463,
+//     title: 'Я тут плавал'
+//   },{
+//     lat: 55.541017,
+//     lng: 30.668463,
+//     title: 'А тут я кушал и плавал'
+//   }
+// ];
