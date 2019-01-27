@@ -4,30 +4,38 @@ import './Search.css'
 import data from '../../data/person_content.json'
 
 class Search extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       persons: [...data],
       search: '',
       order: '',
+      orderInput: 'name'
     }
     this.searchByName = this.searchByName.bind(this)
     this.setSort = this.setSort.bind(this)
+    this.setInputSort = this.setInputSort.bind(this)
   }
 
-  searchByName(e) {
+  searchByName (e) {
     let value = e.target.value
 
     this.setState({ search: value })
   }
 
-  setSort(e) {
+  setSort (e) {
     let value = e.target.value
 
     this.setState({ order: value })
   }
 
-  render() {
+  setInputSort (e) {
+    let value = e.target.value
+
+    this.setState({ orderInput: value })
+  }
+
+  render () {
     let copyArray = [...this.state.persons]
 
     if (this.state.order) {
@@ -42,8 +50,13 @@ class Search extends Component {
     }
 
     if (this.state.search) {
+      let checkInput
+      if (this.state.orderInput) {
+        checkInput = this.state.orderInput === 'name' ? 'name' : 'placeOfBirth'
+      }
+
       copyArray = copyArray.filter(person => {
-        return person.name
+        return person[checkInput]
           .toLowerCase()
           .includes(this.state.search.toLowerCase())
       })
@@ -51,14 +64,17 @@ class Search extends Component {
 
     return (
       <div className="search">
-        <div className="search__block__input">
-          <input placeholder="Поиск по имени" onChange={this.searchByName} />
+        <div className="search__block">
+          <div className="search__block__cnt">
+            <input placeholder="Поиск по:" onChange={this.searchByName} />
+            <select onChange={this.setInputSort} className="">
+              <option value="name">имени</option>
+              <option value="place">локации</option>
+            </select>
+          </div>
           <div>
             <label className="select-label">Сортировать по имени:</label>
-            <select
-              onChange={this.setSort}
-              className="cs-select cs-skin-rotate"
-            >
+            <select onChange={this.setSort}>
               <option value="az">A-Z</option>
               <option value="za">Z-A</option>
             </select>
