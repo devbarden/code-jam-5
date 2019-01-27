@@ -7,14 +7,14 @@ class TimelinePerson extends Component {
     super(props)
     this.state = {
       persons: [...Persons],
-      id: localStorage.getItem('id'),
-      index: parseInt(localStorage.getItem('id'), 10)
+      id: window.localStorage.getItem('id'),
+      index: parseInt(window.localStorage.getItem('id'), 10)
     }
   }
 
   render () {
     let listItems = this.state.persons[this.state.index].timelineBiography
-      .map((d,ind) =>
+      .map((d, ind) =>
         <TimelineItem key={String(ind)} dateText={d.date} >
           <p key={String(ind)}>{d.event}</p>
         </TimelineItem>

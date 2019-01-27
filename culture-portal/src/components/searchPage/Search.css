@@ -1,6 +1,10 @@
 .search {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+}
+
+.search__block__one:hover {
+  cursor: pointer;
 }
 
 .block__search {

@@ -1,21 +1,18 @@
-import React, { Component } from "react"
-import Slider from "react-slick"
+import React, { Component } from 'react'
+import Slider from 'react-slick'
 
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
-
-
 class Gallery extends Component {
-  constructor(props){
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       slides: props.gallery
-    };
+    }
   }
 
-
-  render() {
+  render () {
     const settings = {
       arrows: true,
       dots: true,
@@ -50,7 +47,7 @@ class Gallery extends Component {
           }
         }
       ]
-    };
+    }
 
     return (
       <div
@@ -64,8 +61,8 @@ class Gallery extends Component {
           }}
         > Галерея </h2>
         <Slider {...settings}>
-          {this.state.slides.map((slide) => {
-            return(
+          {this.state.slides.map(slide => {
+            return (
               <div key={slide}
                 style={{
                   width: `100px`,
@@ -78,12 +75,11 @@ class Gallery extends Component {
           })}
         </Slider>
       </div>
-    );
+    )
   }
 }
 
-export default Gallery;
-
-
 // How to use
 // <Gallery gallery={gallery}/> gallery array with images
+
+export default Gallery

@@ -613,6 +613,12 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+img{
+  border-radius: 5px;
+}
+button:hover {
+  cursor: pointer;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -620,12 +626,7 @@ pre tt:after {
 }
 
 
-/* Default style for container */
-.container{
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem 0.5rem;
-}
+
 
 
 /* Footer style */
@@ -695,7 +696,8 @@ pre tt:after {
     margin-left: auto;
   }
   .nav__list{
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 }
 
@@ -756,4 +758,29 @@ pre tt:after {
 .slick-prev{
   left: 0;
   z-index: 10;
+}
+
+
+/* Footer style */
+footer {
+  width: 100%;
+  margin-top: 10px;
+  background: #37383b;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+}
+footer a:hover {
+  color: red !important;
+}
+.footer__button:hover {
+  background-color: #fff !important;
+  color: red !important;
+}
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site-content {
+  flex-grow: 1;
 }

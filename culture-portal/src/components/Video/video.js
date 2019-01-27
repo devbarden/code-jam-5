@@ -1,10 +1,10 @@
 import React from 'react'
 import ModalVideo from 'react-modal-video'
+import { Button } from 'reactstrap'
 
 import './video.css'
 
 class Video extends React.Component {
-
   constructor (props) {
     super(props)
     this.state = {
@@ -15,7 +15,7 @@ class Video extends React.Component {
   }
 
   openModal () {
-    this.setState({isOpen: true})
+    this.setState({ isOpen: true })
   }
 
   render () {
@@ -25,25 +25,23 @@ class Video extends React.Component {
           display: `flex`
         }}
       >
-        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={this.state.videoSrc.videoSrc} onClose={() => this.setState({isOpen: false})} />
-        <button onClick={this.openModal}
-          style={{
-            margin: `1rem auto`,
-            cursor: `pointer`,
-            border: `2px solid rgb(55, 56, 59)`,
-            color: '#ffffff',
-            background: `rgb(237, 35, 36)`,
-            padding: `5px 10px`,
-            borderRadius: `5px`,
-            transition: `.3s`
-          }}
-        >Посмотеть видео</button>
+        <ModalVideo
+          channel='youtube'
+          isOpen={this.state.isOpen}
+          videoId={this.state.videoSrc.videoSrc}
+          onClose={() => this.setState({ isOpen: false })}
+        />
+        <Button
+          color='outline-danger'
+          onClick={this.openModal}
+          style={{ margin: '0 auto' }}
+        >Посмотеть видео</Button>
       </div>
     )
   }
 }
 
-export default Video;
-
 // How to use
 // <Vidoe videoSrc={videoSrc}/> videoSrc === 'String'
+
+export default Video

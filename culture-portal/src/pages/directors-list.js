@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout'
 const DirectorsList = () => (
   <Layout>
     <Search />
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/">Вернуться на главную страницу</Link>
   </Layout>
 )
 
