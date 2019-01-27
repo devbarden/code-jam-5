@@ -8,6 +8,11 @@ import Layout from '../layouts/Layout'
 // import SEO from '../components/seo'
 
 import Persons from '../data/person_content'
+import Video from '../components/Video/video'
+// import Gallery from '../components/Gallery/gallery'
+//
+// import '../../node_modules/slick-carousel/slick/slick.css'
+// import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
 // const IND = 0
 if (!localStorage.getItem('id')){
@@ -22,6 +27,8 @@ const placeOfDeath = Persons[index].placeOfBirth
 const shortInfo = Persons[index].shortInfo
 const works = Persons[index].works
 const personPhoto = Persons[index].photo
+const personGallery = Persons[index].gallery
+const personVideo = Persons[index].video
 
 const PersonPage = () => (
   <Layout>
@@ -32,6 +39,7 @@ const PersonPage = () => (
       <img src={personPhoto} alt={personName} height="300"/>
     </p>
     <TimelinePerson/>
+    <Video videoSrc={"https://youtu.be/g1qkRRX6aKc"}/>
     <h3>Работы</h3>
     <ListOfWorks/>
     <Link to="/">Go back to the homepage</Link>
@@ -39,3 +47,6 @@ const PersonPage = () => (
 )
 
 export default PersonPage
+
+// {/*<Gallery gallery={personGallery}/>*/}
+// <Video videoSrc={personVideo}/>
