@@ -1,7 +1,7 @@
 import Persons from '../../data/person_content'
 import React, { Component } from 'react'
 
-class PersonTimeline extends Component {
+class ListOfWorks extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -14,10 +14,10 @@ class PersonTimeline extends Component {
   render () {
     return (
       <ul>
-        {this.state.persons[this.state.index].works.map(txt => <li>{txt}</li>)}
+        {this.state.persons[this.state.index].works.map((txt, id) => <li key={id.toString()}>{txt}</li>)}
       </ul>
     )
   }
 }
 
-export default PersonTimeline
+export default ListOfWorks

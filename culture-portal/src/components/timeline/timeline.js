@@ -14,9 +14,9 @@ class TimelinePerson extends Component {
 
   render () {
     let listItems = this.state.persons[this.state.index].timelineBiography
-      .map(d =>
-        <TimelineItem key={this.state.id} dateText={d.date} >
-          <p>{d.event}</p>
+      .map((d,ind) =>
+        <TimelineItem key={String(ind)} dateText={d.date} >
+          <p key={String(ind)}>{d.event}</p>
         </TimelineItem>
       )
 
