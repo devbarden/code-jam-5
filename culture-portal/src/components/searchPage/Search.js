@@ -4,30 +4,30 @@ import './Search.css'
 import data from '../../data/person_content.json'
 
 class Search extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       persons: [...data],
       search: '',
-      order: '',
+      order: ''
     }
     this.searchByName = this.searchByName.bind(this)
     this.setSort = this.setSort.bind(this)
   }
 
-  searchByName(e) {
+  searchByName (e) {
     let value = e.target.value
 
     this.setState({ search: value })
   }
 
-  setSort(e) {
+  setSort (e) {
     let value = e.target.value
 
     this.setState({ order: value })
   }
 
-  render() {
+  render () {
     let copyArray = [...this.state.persons]
 
     if (this.state.order) {

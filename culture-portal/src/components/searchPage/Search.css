@@ -1,3 +1,8 @@
+.search {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .block__search {
   width: 100%;
   margin: 20px auto;
@@ -11,6 +16,12 @@
   width: 100%;
 
   border-bottom: 1px solid gray;
+  
+}
+
+.search__block__one:hover {
+  transform: scale(1.03);
+  transition: 1s;
 }
 
 .search__block__one div {
