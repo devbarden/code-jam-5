@@ -22,7 +22,8 @@ class Video extends React.Component {
     return (
       <div
         style={{
-          display: `flex`
+          display: `flex`,
+          margin: `3rem 0`
         }}
       >
         <ModalVideo

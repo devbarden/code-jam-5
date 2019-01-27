@@ -30,7 +30,7 @@ const Header = () => (
                   textDecoration: `none`,
                 }}
               >
-                Список режисеров
+                Режиссеры Беларуси
               </Link>
             </li>
             <li className='nav__item'>
