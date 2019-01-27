@@ -12,6 +12,7 @@ class Search extends Component {
       order: '',
       orderInput: 'name'
     }
+
     this.searchByName = this.searchByName.bind(this)
     this.setSort = this.setSort.bind(this)
     this.setInputSort = this.setInputSort.bind(this)
