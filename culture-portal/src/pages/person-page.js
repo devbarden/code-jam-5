@@ -39,7 +39,7 @@ const PersonPage = () => (
       <img src={personPhoto} alt={personName} height="300"/>
     </p>
     <TimelinePerson/>
-    <Video videoSrc={"https://youtu.be/g1qkRRX6aKc"}/>
+    <Video videoSrc={personVideo}/>
     <h3>Работы</h3>
     <ListOfWorks/>
     <Link to="/">Go back to the homepage</Link>
