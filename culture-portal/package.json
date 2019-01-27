@@ -20,7 +20,7 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
     "reactstrap": "^7.1.0",
-    "vertical-timeline-component-for-react": "latest",
+    "vertical-timeline-component-for-react": "latest"
   },
   "keywords": [
     "gatsby"
