@@ -69,7 +69,7 @@ class Search extends Component {
             <input placeholder="Поиск по:" onChange={this.searchByName} />
             <select onChange={this.setInputSort} className="">
               <option value="name">имени</option>
-              <option value="date">месту</option>
+              <option value="place">локации</option>
             </select>
           </div>
           <div>
