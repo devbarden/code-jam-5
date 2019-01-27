@@ -33,6 +33,16 @@ const Header = () => (
                 Список режисерова
               </Link>
             </li>
+              <li className='nav__item'>
+                  <Link className='nav__link'
+                        to="/team"
+                        style={{
+                            textDecoration: `none`,
+                        }}
+                  >
+                      Наша команда
+                  </Link>
+              </li>
           </ul>
           <ul className='language__list'>
             <li className='language__item'>
