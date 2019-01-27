@@ -38,6 +38,10 @@
     height: 100%;
 }
 
+.director-biography h2 {
+    margin-bottom: 15px;
+}
+
 span {
     font-weight : bold;
     margin-left: 3px;
