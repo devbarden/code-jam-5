@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { withNamespaces } from 'react-i18next'
 
-const Header = (props) => {
+const Header = props => {
   const { t, i18n } = props
 
   const changeLanguage = lng => {
     i18n.changeLanguage(lng)
-  };
+  }
 
-  return(
+  return (
     <header
       style={{
         background: `#38393d`,
@@ -58,17 +58,31 @@ const Header = (props) => {
                 </Link>
               </li>
             </ul>
-            
           </nav>
           <div className='language__list'>
-            <button onClick={() => changeLanguage('be')} className='language__item'>
-              <img src='https://image.flaticon.com/icons/svg/197/197527.svg' alt='by language' className='language__image'></img>
+            <button
+              onClick={() => changeLanguage('be')}
+              className='language__item'>
+              <img
+                src='https://image.flaticon.com/icons/svg/197/197527.svg'
+                alt='by language'
+                className='language__image'></img>
             </button>
-            <button onClick={() => changeLanguage('en')} className='language__item'>
-              <img src='https://image.flaticon.com/icons/svg/197/197374.svg' alt='en language' className='language__image'></img>
+            <button
+              onClick={() => changeLanguage('en')}
+              className='language__item'>
+              <img
+                src='https://image.flaticon.com/icons/svg/197/197374.svg'
+                alt='en language'
+                className='language__image'></img>
             </button>
-            <button onClick={() => changeLanguage('ru')} className='language__item'>
-              <img src='https://image.flaticon.com/icons/svg/197/197408.svg' alt='ru language' className='language__image'></img>
+            <button
+              onClick={() => changeLanguage('ru')}
+              className='language__item'>
+              <img
+                src='https://image.flaticon.com/icons/svg/197/197408.svg'
+                alt='ru language'
+                className='language__image'></img>
             </button>
           </div>
         </div>
@@ -85,4 +99,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default withNamespaces('translation')(Header);
+export default withNamespaces('translation')(Header)

@@ -24,11 +24,12 @@ const personGallery = Persons[index].gallery
 const personVideo = Persons[index].video
 const personMap = Persons[index].map
 
-
 const PersonPage = () => (
   <Layout>
     <h1 style={{ textAlign: 'center' }}>{personName}</h1>
-    <p>{personName} родился {dateOfBirth} в городе {placeOfDeath}. {shortInfo}</p>
+    <p>
+      {personName} родился {dateOfBirth} в городе {placeOfDeath}. {shortInfo}
+    </p>
     <p style={{ textAlign: 'center' }}>
       <img src={personPhoto} alt={personName} height="300"/>
     </p>
@@ -43,4 +44,3 @@ const PersonPage = () => (
 )
 
 export default PersonPage
-

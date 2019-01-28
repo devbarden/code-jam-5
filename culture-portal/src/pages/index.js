@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../layouts/Layout'
 import MainPage from '../layouts/mainPage/MainPage'
 
-import './i18n';
+import './i18n'
 
 const IndexPage = () => (
   <Layout>
