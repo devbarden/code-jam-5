@@ -102,7 +102,7 @@ class Search extends Component {
                   <span>Место рождения:</span> {person.placeOfBirth}
                 </div>
                 <div>
-                  <span> Дата рождения:</span> {person.dateOfDeath}
+                  <span>Дата смерти:</span> {person.dateOfDeath}
                 </div>
               </div>
               <div>
