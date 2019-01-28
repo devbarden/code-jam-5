@@ -18,7 +18,12 @@ const Header = (props) => {
       }}
     >
       <div className='container'>
-        <div className='header__inner'>
+        <div className='header__inner'
+          style={{
+            display: `flex`,
+            padding: `1rem 0`
+          }}
+        >
           <nav className='nav'>
             <ul className='nav__list'>
               <li className='nav__item'>
@@ -55,9 +60,17 @@ const Header = (props) => {
             </ul>
             
           </nav>
-            <button onClick={() => changeLanguage('be')}>be</button>
-            <button onClick={() => changeLanguage('en')}>en</button>
-            <button onClick={() => changeLanguage('ru')}>ru</button>
+          <div className='language__list'>
+            <button onClick={() => changeLanguage('be')} className='language__item'>
+              <img src='https://image.flaticon.com/icons/svg/197/197527.svg' alt='by language' className='language__image'></img>
+            </button>
+            <button onClick={() => changeLanguage('en')} className='language__item'>
+              <img src='https://image.flaticon.com/icons/svg/197/197374.svg' alt='en language' className='language__image'></img>
+            </button>
+            <button onClick={() => changeLanguage('ru')} className='language__item'>
+              <img src='https://image.flaticon.com/icons/svg/197/197408.svg' alt='ru language' className='language__image'></img>
+            </button>
+          </div>
         </div>
       </div>
     </header>
