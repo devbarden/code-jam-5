@@ -1,6 +1,7 @@
 import React from 'react'
-import { withNamespaces } from 'react-i18next'
 import { FaVk, FaFacebookSquare, FaTwitterSquare } from 'react-icons/fa'
+import { withNamespaces } from 'react-i18next'
+import { withI18next } from 'gatsby-plugin-i18next'
 
 const Footer = props => {
   const { t } = props
@@ -103,4 +104,4 @@ const Footer = props => {
   )
 }
 
-export default withNamespaces('translation')(Footer)
+export default withI18next()(withNamespaces()(Footer))

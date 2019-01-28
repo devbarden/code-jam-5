@@ -10,13 +10,13 @@ class Search extends Component {
       persons: [...data],
       search: '',
       order: '',
-      orderInput: 'name'
+      orderInput: 'name',
+      ada: false,
     }
 
     this.searchByName = this.searchByName.bind(this)
     this.setSort = this.setSort.bind(this)
     this.setInputSort = this.setInputSort.bind(this)
-    this.linkToPersonPage = this.linkToPersonPage.bind(this)
   }
 
   searchByName (e) {
@@ -40,7 +40,7 @@ class Search extends Component {
   linkToPersonPage (id) {
     window.localStorage.setItem('id', id)
     window.location.assign('/person-page')
-  }
+  };
 
   render () {
     let copyArray = [...this.state.persons]
@@ -64,8 +64,7 @@ class Search extends Component {
 
       copyArray = copyArray.filter(person => {
         return person[checkInput]
-          .toLowerCase()
-          .includes(this.state.search.toLowerCase())
+          .toLowerCase().includes(this.state.search.toLowerCase())
       })
     }
 
@@ -87,35 +86,36 @@ class Search extends Component {
             </select>
           </div>
         </div>
-        <div className="search__block__list">
-          {copyArray.map(person => (
-            <div
-              className="search__block__one"
-              key={person.id}
-              onClick={() => this.linkToPersonPage(person.id)}
-            >
-              <div>
+        {this.state.ada ? (
+          <div className="search__block__list">
+            {copyArray.map(person => (
+              <div
+                className="search__block__one"
+                key={person.id}
+                onClick={() => this.linkToPersonPage(person.id)}
+              >
                 <div>
-                  <span>Имя:</span> {person.name}
+                  <div>
+                    <span>Имя:</span> {person.name}
+                  </div>
+                  <div>
+                    <span>Место рождения:</span> {person.placeOfBirth}
+                  </div>
+                  <div>
+                    <span>Дата смерти:</span> {person.dateOfDeath}
+                  </div>
                 </div>
                 <div>
-                  <span>Место рождения:</span> {person.placeOfBirth}
-                </div>
-                <div>
-                  <span>Дата смерти:</span> {person.dateOfDeath}
+                  <img
+                    src={person.photo}
+                    alt={person.name}
+                    width="100px"
+                    height="100px" />
                 </div>
               </div>
-              <div>
-                <img
-                  src={person.photo}
-                  alt={person.name}
-                  width="100px"
-                  height="100px"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     )
   }
