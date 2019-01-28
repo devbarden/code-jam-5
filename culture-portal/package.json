@@ -21,16 +21,21 @@
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.8",
     "google-maps-react": "^2.0.2",
+    "i18next": "^14.0.1",
+    "i18next-browser-languagedetector": "^2.2.4",
+    "i18next-xhr-backend": "^1.5.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-i18next": "^8.0.6",
     "react-icons": "^3.3.0",
     "react-modal-video": "^1.2.1",
     "react-slick": "^0.23.2",
     "reactstrap": "^7.1.0",
     "slick-carousel": "^1.8.1",
-    "vertical-timeline-component-for-react": "latest"
+    "vertical-timeline-component-for-react": "latest",
+    "fs-extra": "latest"
   },
   "keywords": [
     "gatsby"

@@ -55,7 +55,7 @@ const Header = (props) => {
             </ul>
             
           </nav>
-            <button onClick={() => changeLanguage('de')}>de</button>
+            <button onClick={() => changeLanguage('be')}>be</button>
             <button onClick={() => changeLanguage('en')}>en</button>
             <button onClick={() => changeLanguage('ru')}>ru</button>
         </div>

@@ -9,10 +9,7 @@ const DirectorOfTheDayContainer = ({ photo, name, placeOfBirth, dateOfBirth, dat
         <img src={photo} alt={name}/>
       </div>
       <div className="director-biography">
-        <h2
-          style={{ border: '4px dotted red', textAlign: 'center' }}>
-          Режиссёр дня
-        </h2>
+        <h2 className='director-of-the-day-heading'>Режиссёр дня</h2>
         <h2>{name}</h2>
         <p>Место Рождения:<span>{placeOfBirth}</span></p>
         <p>Дата Рождения:<span>{dateOfBirth}</span> г.</p>

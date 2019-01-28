@@ -40,8 +40,12 @@
 
 .director-biography h2 {
     margin-bottom: 15px;
+    text-align: center;
 }
 
+.director-of-the-day-heading {
+    border: 4px dotted red;
+}
 span {
     font-weight : bold;
     margin-left: 3px;
