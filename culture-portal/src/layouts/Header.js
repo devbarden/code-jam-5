@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { withNamespaces } from 'react-i18next'
+import { withI18next } from 'gatsby-plugin-i18next'
 
 const Header = props => {
   const { t, i18n } = props
@@ -99,4 +100,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default withNamespaces('translation')(Header)
+export default withI18next()(withNamespaces()(Header))

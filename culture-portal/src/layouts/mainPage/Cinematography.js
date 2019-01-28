@@ -1,5 +1,6 @@
 import React from 'react'
 import { withNamespaces } from 'react-i18next'
+import { withI18next } from 'gatsby-plugin-i18next'
 
 const Cinematography = props => {
   const { t } = props
@@ -15,4 +16,4 @@ const Cinematography = props => {
   )
 }
 
-export default withNamespaces('translation')(Cinematography)
+export default withI18next()(withNamespaces()(Cinematography))

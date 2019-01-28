@@ -2,8 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../layouts/Layout'
 import MainPage from '../layouts/mainPage/MainPage'
-
-import './i18n'
+import { withNamespaces } from 'react-i18next'
+import { withI18next } from 'gatsby-plugin-i18next'
 
 const IndexPage = () => (
   <Layout>
@@ -11,4 +11,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default withI18next()(withNamespaces()(IndexPage))

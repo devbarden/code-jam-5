@@ -1,75 +1,71 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import './Search.css';
-import data from '../../data/person_content.json';
+import './Search.css'
+import data from '../../data/person_content.json'
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       persons: [...data],
       search: '',
       order: '',
       orderInput: 'name',
       ada: false,
-    };
+    }
 
-    this.searchByName = this.searchByName.bind(this);
-    this.setSort = this.setSort.bind(this);
-    this.setInputSort = this.setInputSort.bind(this);
+    this.searchByName = this.searchByName.bind(this)
+    this.setSort = this.setSort.bind(this)
+    this.setInputSort = this.setInputSort.bind(this)
   }
 
-  searchByName(e) {
-    let value = e.target.value;
+  searchByName (e) {
+    let value = e.target.value
 
-    this.setState({ search: value });
+    this.setState({ search: value })
   }
 
-  setSort(e) {
-    let value = e.target.value;
+  setSort (e) {
+    let value = e.target.value
 
-    this.setState({ order: value });
+    this.setState({ order: value })
   }
 
-  setInputSort(e) {
-    let value = e.target.value;
+  setInputSort (e) {
+    let value = e.target.value
 
-    this.setState({ orderInput: value });
+    this.setState({ orderInput: value })
   }
 
-  // Этот метод linkToPersonPage надо как-то задать, чтобы window.localStorage подтянулось браузером, т.е. после отрисовки.....
+  linkToPersonPage (id) {
+    window.localStorage.setItem('id', id)
+    window.location.assign('/person-page')
+  };
 
-  componentDidMount() {
-    linkToPersonPage = id => {
-      window.localStorage.setItem('id', id);
-      window.location.assign('/person-page');
-    };
-    this.setState({ ada: true });
-  }
-
-  render() {
-    let copyArray = [...this.state.persons];
+  render () {
+    let copyArray = [...this.state.persons]
 
     if (this.state.order) {
-      let check = this.state.order === 'az' ? 1 : -1;
+      let check = this.state.order === 'az' ? 1 : -1
       copyArray.sort((a, b) => {
         if (a.name > b.name) {
-          return check;
+          return check
         } else {
-          return -check;
+          return -check
         }
-      });
+      })
     }
 
     if (this.state.search) {
-      let checkInput;
+      let checkInput
       if (this.state.orderInput) {
-        checkInput = this.state.orderInput === 'name' ? 'name' : 'placeOfBirth';
+        checkInput = this.state.orderInput === 'name' ? 'name' : 'placeOfBirth'
       }
 
       copyArray = copyArray.filter(person => {
-        return person[checkInput].toLowerCase().includes(this.state.search.toLowerCase());
-      });
+        return person[checkInput]
+          .toLowerCase().includes(this.state.search.toLowerCase())
+      })
     }
 
     return (
@@ -110,15 +106,19 @@ class Search extends Component {
                   </div>
                 </div>
                 <div>
-                  <img src={person.photo} alt={person.name} width="100px" height="100px" />
+                  <img
+                    src={person.photo}
+                    alt={person.name}
+                    width="100px"
+                    height="100px" />
                 </div>
               </div>
             ))}
           </div>
         ) : null}
       </div>
-    );
+    )
   }
 }
 
-export default Search;
+export default Search

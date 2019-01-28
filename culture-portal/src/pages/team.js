@@ -2,6 +2,7 @@ import React from 'react'
 import * as FontAwesome from 'react-icons/fa'
 
 import { withNamespaces } from 'react-i18next'
+import { withI18next } from 'gatsby-plugin-i18next'
 
 import Layout from '../layouts/Layout'
 
@@ -83,4 +84,4 @@ const TeamPage = props => {
   )
 }
 
-export default withNamespaces('translation')(TeamPage)
+export default withI18next()(withNamespaces()(TeamPage))
