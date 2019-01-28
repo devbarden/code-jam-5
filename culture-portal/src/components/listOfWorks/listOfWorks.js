@@ -6,19 +6,28 @@ class ListOfWorks extends Component {
     super(props)
     this.state = {
       persons: [...Persons],
+      id: '',
+      index: ''
+    }
+  }
+
+  componentDidMount () {
+    this.setState({
       id: window.localStorage.getItem('id'),
       index: parseInt(window.localStorage.getItem('id'), 10)
-    }
+    })
   }
 
   render () {
     return (
       <ul>
-        {this.state.persons[this.state.index].works.map(
-          (txt, id) => <li
-            key={id.toString()}
-            style={{ listStyle: 'circle' }}>{txt}</li>)
-        }
+        {this.state.index
+          ? this.state.persons[this.state.index].works.map((txt, id) => (
+            <li key={id.toString()} style={{ listStyle: 'circle' }}>
+              {txt}
+            </li>
+          ))
+          : null}
       </ul>
     )
   }
