@@ -1,4 +1,3 @@
-# Code Jam 5
 1. Чтобы просмотреть работу склонируйте репозиторий  
 
 > git clone https://github.com/devbarden/code-jam-5.git
