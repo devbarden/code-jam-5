@@ -20,8 +20,9 @@ class ListOfWorks extends Component {
 
   render () {
     return (
+
       <ul>
-        {this.state.index
+        {this.state.index || this.state.index === 0
           ? this.state.persons[this.state.index].works.map((txt, id) => (
             <li key={id.toString()} style={{ listStyle: 'circle' }}>
               {txt}
