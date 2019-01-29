@@ -1,19 +1,19 @@
-import React from 'react'
-import { FaVk, FaFacebookSquare, FaTwitterSquare } from 'react-icons/fa'
-import { withNamespaces } from 'react-i18next'
-import { withI18next } from 'gatsby-plugin-i18next'
+import React from 'react';
 
-const Footer = props => {
-  const { t } = props
-
-  return (
-    <footer className='footer'
+const Footer = ({footerDescr, footerC, footerBtn, footerPlacholder}) => (
+  <footer className='footer'
       style={{
         background: `#37383b`,
-        fontFamily: `Segoe UI, sans-serif`
+        fontFamily: `Segoe UI, sans-serif`,
       }}
     >
-      <div className='container'>
+      <div className='container'
+        style={{
+          maxWidth: `960px`,
+          margin: `0 auto`,
+          padding: `1rem`
+        }}
+      >
         <div className='footer__inner'>
           <div className='footer__about'>
             <p
@@ -22,7 +22,7 @@ const Footer = props => {
                 fontSize: `0.9rem`,
                 margin: `15px 0px 0px`
               }}
-            >{t('footer.desc')}
+            >{footerDescr}
             </p>
           </div>
           <div className='footer__mail'>
@@ -39,7 +39,7 @@ const Footer = props => {
               >
                 <input
                   type='text'
-                  placeholder={t('footer.placeholder')}
+                  placeholder={footerPlacholder}
                   className='footer__input'
                   style={{
                     background: `#47474b`,
@@ -60,7 +60,7 @@ const Footer = props => {
                     height: `100%`,
                     right: `0`
                   }}
-                >{t('footer.btn')}</button>
+                >{footerBtn}</button>
               </div>
             </form>
           </div>
@@ -73,8 +73,8 @@ const Footer = props => {
               style={{
                 color: `#ffffff`
               }}
-            >© 2013–2019, {t('footer.c')}</span>
-            <ul className='social__list'>
+            >© 2013–2019, {footerC}</span>
+            {/* <ul className='social__list'>
               <li className='social__item'>
                 <a
                   href='https://vk.com'
@@ -96,12 +96,11 @@ const Footer = props => {
                   <FaTwitterSquare />
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+)
 
-export default withI18next()(withNamespaces()(Footer))
+export default Footer;

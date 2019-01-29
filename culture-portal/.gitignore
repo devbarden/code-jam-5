@@ -1,9 +1,3 @@
-# Webstorm
-.idea
-
-# Package
-.package-lock.json
-
 # Logs
 logs
 *.log
@@ -62,9 +56,7 @@ typings/
 
 # gatsby files
 .cache/
-public/
-!/public/locales/
-!/public/icons/
+public
 
 # Mac files
 .DS_Store

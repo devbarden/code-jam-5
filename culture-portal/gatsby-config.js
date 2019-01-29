@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/code-jam-5",
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
@@ -29,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-i18next`,
       options: {
-        availableLngs: ['en', 'ru', 'be'],
+        availableLngs: ['en', 'el'],
         fallbackLng: 'en',
         saveMissing: true,
         debug: true,
