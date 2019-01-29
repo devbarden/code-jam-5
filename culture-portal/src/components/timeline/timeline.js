@@ -7,24 +7,28 @@ class TimelinePerson extends Component {
     super(props)
     this.state = {
       persons: [...Persons],
-      id: window.localStorage.getItem('id'),
-      index: parseInt(window.localStorage.getItem('id'), 10)
+      id: '',
+      index: ''
     }
   }
 
+  componentDidMount () {
+    this.setState({
+      id: window.localStorage.getItem('id'),
+      index: parseInt(window.localStorage.getItem('id'), 10)
+    })
+  }
+
   render () {
-    let listItems = this.state.persons[this.state.index].timelineBiography
-      .map((d, ind) =>
-        <TimelineItem key={String(ind)} dateText={d.date} >
+    let listItems = this.state.index
+      ? this.state.persons[this.state.index].timelineBiography.map((d, ind) => (
+        <TimelineItem key={String(ind)} dateText={d.date}>
           <p key={String(ind)}>{d.event}</p>
         </TimelineItem>
-      )
+      ))
+      : <div></div>
 
-    return (
-      <Timeline lineColor={'#ddd'}>
-        {listItems}
-      </Timeline>
-    )
+    return <Timeline lineColor={'#ddd'}>{listItems}</Timeline>
   }
 }
 
