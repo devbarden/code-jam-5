@@ -1,5 +1,5 @@
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
-import Persons from '../../data/person_content'
+import Persons from './../../data/person_content'
 import React, { Component } from 'react'
 
 class TimelinePerson extends Component {

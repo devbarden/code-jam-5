@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { graphql } from 'gatsby';
+import { withNamespaces } from 'react-i18next';
+import { withI18next } from 'gatsby-plugin-i18next';
+
 import ListOfWorks from '../components/listOfWorks/listOfWorks'
 import TimelinePerson from '../components/timeline/timeline'
 import Layout from '../components/layout';
 
-import Persons from '../data/person_content'
+import Persons from './../data/person_content'
 import Video from '../components/Video/video'
 import Gallery from '../components/Gallery/gallery'
 import MapContainer from '../components/Map/map'
@@ -38,10 +42,10 @@ class PersonPage extends React.Component {
         <p style={{ textAlign: 'center' }}>
           <img src={this.personPhoto} alt={this.personName} height="300"/>
         </p>
-        <TimelinePerson/>
-        <Gallery gallery={this.personGallery || []}/>
+        {/* <TimelinePerson/> */}
+        {/* <Gallery gallery={this.personGallery}/> */}
         <Video videoSrc={this.personVideo}/>
-        <MapContainer markers={this.personMap}/>
+        {/* <MapContainer markers={this.personMap}/> */}
         <h3>Работы</h3>
         <ListOfWorks/>
         <Link to="/">Вернуться на главную страницу</Link>
@@ -50,4 +54,12 @@ class PersonPage extends React.Component {
   }
 }
 
-export default PersonPage
+export default withI18next()(withNamespaces()(PersonPage));
+
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
+      ...TranslationFragment
+    }
+  }
+`;

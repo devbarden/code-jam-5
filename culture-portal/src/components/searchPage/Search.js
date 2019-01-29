@@ -11,7 +11,7 @@ class Search extends Component {
       search: '',
       order: '',
       orderInput: 'name',
-      ada: false,
+      ada: true,
     }
 
     this.searchByName = this.searchByName.bind(this)

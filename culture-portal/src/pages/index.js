@@ -6,7 +6,7 @@ import { withI18next } from 'gatsby-plugin-i18next';
 import Layout from '../components/layout';
 
 import Cinematography from '../components/cinematography';
-import DirectorOfTheDayContainer from '../components/directorOfTheDayContainer';
+import DirectorOfTheDay from '../components/directorOfTheDay';
 
 const IndexPage = ({ t }) => (
   <Layout>
@@ -14,7 +14,7 @@ const IndexPage = ({ t }) => (
       headerMainPage={t('headerMainPage')}
       welcomeMain={t('welcomeMain')}
     />
-    <DirectorOfTheDayContainer
+    <DirectorOfTheDay
       mainDirectorDayTitle={t('mainDirectorDayTitle')}
       mainDirectorDayBornPlace={t('mainDirectorDayBornPlace')}
       mainDirectorDayBornData={t('mainDirectorDayBornData')}

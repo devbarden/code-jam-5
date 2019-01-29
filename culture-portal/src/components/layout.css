@@ -729,3 +729,48 @@ footer a:hover {
   color: rgb(165, 35, 35);
   transition-duration: .3s;
 }
+
+
+/* Director of the day style */
+.director-of-the-day {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.director-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.director-photo {
+  width: 350px;
+  height: 450px;
+}
+
+.director-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.director-biography h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.director-of-the-day-heading {
+  border: 4px dotted red;
+}
+span {
+  font-weight : bold;
+  margin-left: 3px;
+}
+
+.short-info {
+  max-width: 350px;
+}
+

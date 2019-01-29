@@ -33,7 +33,7 @@ const TeamPage = ({ t }) => (
             src="https://avatars2.githubusercontent.com/u/40957866?s=460&v=4"
             alt="developer"
           />
-          <p className="text-center">{t('developerName1')}</p>
+          <p className="text-center">{t('developerName2')}</p>
           <a href="https://github.com/VicRodzko" className="icons-developer">
             <FontAwesome.FaGithub className="icons-developer" />
           </a>
