@@ -774,3 +774,25 @@ span {
   max-width: 350px;
 }
 
+/* Gallery style */
+.slick-slider .slick-track{
+  display: flex;
+  align-items: center;
+}
+.slick-slider img{
+  margin: 0 auto;
+  max-width: 180px;
+}
+.slick-slider .slick-next{
+  right: 0;
+  z-index: 10;
+}
+.slick-slider .slick-next:before,
+.slick-slider .slick-prev:before{
+  color: rgb(55, 56, 59);
+}
+.slick-slider .slick-prev{
+  left: 0;
+  z-index: 10;
+}
+
