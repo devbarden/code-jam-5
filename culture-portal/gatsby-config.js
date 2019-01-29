@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-i18next`,
       options: {
-        availableLngs: ['en', 'el'],
-        fallbackLng: 'en',
+        availableLngs: ['ru', 'en', 'by'],
+        fallbackLng: 'ru',
         saveMissing: true,
         debug: true,
       },
