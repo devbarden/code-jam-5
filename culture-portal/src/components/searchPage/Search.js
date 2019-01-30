@@ -109,7 +109,7 @@ class Search extends Component {
                   <img
                     src={person.photo}
                     alt={person.name}
-                    width="100px"
+
                     height="100px" />
                 </div>
               </div>
