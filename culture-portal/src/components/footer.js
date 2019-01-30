@@ -73,7 +73,7 @@ const Footer = ({footerDescr, footerC, footerBtn, footerPlacholder}) => (
               style={{
                 color: `#ffffff`
               }}
-            >© 2013–2019, {footerC}</span>
+            >© 2019 {footerC}</span>
             {/* <ul className='social__list'>
               <li className='social__item'>
                 <a
