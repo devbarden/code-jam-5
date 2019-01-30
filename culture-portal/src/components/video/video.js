@@ -36,7 +36,7 @@ class Video extends React.Component {
           color='outline-danger'
           onClick={this.openModal}
           style={{ margin: '0 auto' }}
-        >Посмотеть видео</Button>
+        >Посмотреть видео</Button>
       </div>
     )
   }
