@@ -1,11 +1,11 @@
 import React from 'react'
 import * as FontAwesome from 'react-icons/fa'
 import { graphql } from 'gatsby';
-import './teamPageStyle.css'
 import { withNamespaces } from 'react-i18next'
 import { withI18next } from 'gatsby-plugin-i18next'
-
 import Layout from '../components/layout'
+import 'bootstrap/dist/css/bootstrap.css'
+import './teamPageStyle.css'
 
 
 const TeamPage = ({ t }) => (
